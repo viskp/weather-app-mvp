@@ -23,6 +23,17 @@ import java.util.List;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ * This activity will be the first activity to be shown to user. Initially a leader view
+ * {@link WeatherActivity#loaderMainViewRL} will be shown to user unless weather data is fetched.
+ * For now Bangalore is added the default city to be shown and with the help of view
+ * {@link WeatherActivity#searchCityET} user can search city for checking the weather and forecast.
+ * ================================================================================================
+ * This class follows MVP design pattern, where Model, View and Presenter's contract is commonly
+ * defined in {@link WeatherContract} class. And implementations are defined in
+ * {@link WeatherModelImpl} and {@link WeatherPresenterImpl} classes.
+ */
+//TODO Adding feature of getting current location and showing the weather info.
 public class WeatherActivity extends AppCompatActivity implements WeatherContract.View {
     private WeatherContract.Presenter weatherPresenter;
     private WeatherContract.Model weatherModel;
@@ -49,6 +60,10 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
         weatherPresenter.getWeatherData(getTextToBeSearched());
     }
 
+    /**
+     * Callback give from {@link WeatherPresenterImpl} for initializing the views and there
+     * listeners if they have any.
+     */
     @Override
     public void onInitView() {
         loaderMainViewRL = findViewById(R.id.loader_main_view);
@@ -81,6 +96,11 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
         });
     }
 
+    /**
+     * Handles the visibility of loader view.
+     *
+     * @param show show the view if true else hide it.
+     */
     @Override
     public void handleLoaderView(boolean show) {
         if (show) {
@@ -94,31 +114,58 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
         }
     }
 
+    /**
+     * Handles the visibility of weather view.
+     *
+     * @param show show the view if true else hide it.
+     */
     @Override
     public void handleWeatherView(boolean show) {
         weatherForecastViewLL.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 
+    /**
+     * Handles the visibility of error view.
+     *
+     * @param show show the view if true else hide it.
+     */
     @Override
     public void handleErrorView(boolean show) {
         errorViewRL.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 
+    /**
+     * Sets the city name and temperature of that city.
+     *
+     * @param cityName    name of the city.
+     * @param temperature of the city.
+     */
     @Override
     public void setCityCurrentTemperature(String cityName, String temperature) {
         cityNameTV.setText(cityName);
         temperatureTV.setText(temperature);
     }
 
+    /**
+     * A common method for showing any message in Toast format.
+     *
+     * @param message to be shown
+     */
     @Override
     public void showErrorMessage(String message) {
         Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Displays the forecast information based on searched city. It also applies a slide up
+     * animation for all forecast rows.
+     *
+     * @param forecastData
+     */
     @Override
     public void showForeCastData(List<ForecastDataModel> forecastData) {
         forecastRV.setLayoutManager(new LinearLayoutManager(this));
-        forecastRV.setAdapter(new ForecastAdapter(activity, forecastData));
+        forecastRV.setAdapter(new ForecastAdapter(forecastData));
         final LayoutAnimationController controller =
                 AnimationUtils.loadLayoutAnimation(activity, R.anim.aslide_up_anim);
         forecastRV.setLayoutAnimation(controller);
@@ -132,6 +179,9 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
         weatherPresenter.destroyView();
     }
 
+    /**
+     * @return text value of {@link WeatherActivity#searchCityET}
+     */
     private String getTextToBeSearched() {
         return searchCityET.getText().toString();
     }

@@ -11,6 +11,15 @@ import com.vishal.weatherapp.utils.Utils;
 
 import io.reactivex.Observable;
 
+/**
+ * Model implementation for {@link WeatherActivity} that holds the data required by the
+ * {@link WeatherPresenterImpl}.
+ * Here we can define get the datas from different sources like, SharedPref, LocalDB, Network call
+ * and so on.
+ *
+ * @author Vishal - 24th Feb 2019
+ * @since 1.0.0
+ */
 public class WeatherModelImpl implements WeatherContract.Model {
     private WeatherRestService weatherRestService;
     private Context context;
@@ -20,12 +29,24 @@ public class WeatherModelImpl implements WeatherContract.Model {
         weatherRestService = WeatherAPIClient.getClient().create(WeatherRestService.class);
     }
 
+    /**
+     * Initiates the API call for getting the weather info.
+     *
+     * @param cityName name of the city
+     * @return {@link Observable<TemperatureResponse>}
+     */
     @Override
     public Observable<TemperatureResponse> initiateWeatherInfoCall(String cityName) {
         return weatherRestService.getWeatherInfo(cityName, Utils.FORECAST_DAYS);
         //Other stuffs like caching the data to local DB or shared prefs.
     }
 
+    /**
+     * Fetches the correct icon for weather condition based on condition code give by the API
+     *
+     * @param code of the condition type
+     * @return icon to be used for weather condition
+     */
     @Override
     public Drawable getConditionIcon(int code) {
         int icon = R.mipmap.clear;

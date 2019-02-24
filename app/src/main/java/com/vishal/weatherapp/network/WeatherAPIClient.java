@@ -18,6 +18,14 @@ import static com.vishal.weatherapp.utils.Utils.DEFAULT_WRITE_TIMEOUT_IN_MS;
 import static com.vishal.weatherapp.utils.Utils.END_POINT;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
+/**
+ * This class holds the configuration for calling weather APIS, end point and other timeouts are
+ * defined here. And common header can be defined as a interceptor in
+ * {@link WeatherAPIClient#getClient()}
+ *
+ * @author Vishal - 24th Feb 2019
+ * @since 1.0.0
+ */
 public class WeatherAPIClient {
 
     private static Retrofit retrofit = null;
@@ -26,7 +34,7 @@ public class WeatherAPIClient {
      * Binds and returns the retorfit client object. We declares global headers, logger and other
      * required interceptors.
      *
-     * @return
+     * @return wrapped configuration object of type {@link Retrofit}
      */
     public static Retrofit getClient() {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();

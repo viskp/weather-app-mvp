@@ -9,6 +9,13 @@ import java.util.List;
 
 import io.reactivex.Observable;
 
+/**
+ * Contract class for {@link WeatherActivity} that holds all the required method used by the View,
+ * Model and Presenter.
+ *
+ * @author Vishal - 24th Feb 2019
+ * @since 1.0.0
+ */
 public interface WeatherContract {
     interface View {
         void onInitView();

@@ -1,9 +1,7 @@
 package com.vishal.weatherapp;
 
 import android.graphics.drawable.Drawable;
-import android.text.Annotation;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.google.gson.Gson;
 import com.vishal.weatherapp.pojo.Condition;
@@ -24,10 +22,15 @@ import java.util.List;
 import io.reactivex.Scheduler;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.observers.DisposableObserver;
-import okhttp3.ResponseBody;
-import retrofit2.Converter;
 import retrofit2.HttpException;
 
+/**
+ * Presenter implementation for {@link WeatherActivity} that holds the view's command and fetches
+ * data from {@link WeatherModelImpl}, then updates the View UI.
+ *
+ * @author Vishal - 24th Feb 2019
+ * @since 1.0.0
+ */
 public class WeatherPresenterImpl implements WeatherContract.Presenter {
     private WeatherContract.View weatherView;
     private WeatherContract.Model weatherModel;
@@ -44,6 +47,9 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
         compositeDisposable = new CompositeDisposable();
     }
 
+    /**
+     * Initializes the basic UI based on requirement.
+     */
     @Override
     public void initView() {
         weatherView.onInitView();
@@ -51,7 +57,12 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
         weatherView.handleErrorView(false);
     }
 
-
+    /**
+     * Uses the RXJava for doing the API calls and handling the response. It updates the ui based
+     * on error or success response.
+     *
+     * @param cityName name of the city
+     */
     @Override
     public void getWeatherData(String cityName) {
         if (!TextUtils.isEmpty(cityName)) {
@@ -94,6 +105,12 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
         }
     }
 
+    /**
+     * Handles the response of weather info api, and updates the city name, temperature and
+     * forecast view.
+     *
+     * @param temperatureResponse
+     */
     public void handleTemperatureResponse(TemperatureResponse temperatureResponse) {
         if (null != temperatureResponse) {
             Error error = temperatureResponse.getError();
@@ -156,11 +173,18 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
         }
     }
 
+    /**
+     * Manages the view based on error.
+     */
     public void showErrorView() {
         weatherView.handleLoaderView(false);
         weatherView.handleErrorView(true);
     }
 
+    /**
+     * This call back is give by the Activity while finishing, observables used in this presenter
+     * will be disposed here.
+     */
     @Override
     public void destroyView() {
         compositeDisposable.dispose();
