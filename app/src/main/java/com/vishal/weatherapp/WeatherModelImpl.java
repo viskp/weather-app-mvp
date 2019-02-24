@@ -1,15 +1,25 @@
 package com.vishal.weatherapp;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
+import android.text.format.DateFormat;
 
 import com.vishal.weatherapp.network.WeatherAPIClient;
 import com.vishal.weatherapp.network.WeatherRestService;
 import com.vishal.weatherapp.pojo.TemperatureResponse;
 import com.vishal.weatherapp.utils.Utils;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import io.reactivex.Observable;
+
+import static com.vishal.weatherapp.utils.Utils.FORECAST_VIEW_DATE_FORMAT;
+import static com.vishal.weatherapp.utils.Utils.INPUT_DATE_FORMAT;
 
 /**
  * Model implementation for {@link WeatherActivity} that holds the data required by the
@@ -75,5 +85,38 @@ public class WeatherModelImpl implements WeatherContract.Model {
                 break;
         }
         return ContextCompat.getDrawable(context, icon);
+    }
+
+    /**
+     * Calculates the display date from a give date inputDateString, uses the
+     * FORECAST_VIEW_DATE_FORMAT for dates other that today and tomorrow.
+     *
+     * @param inputDateString date to be formatted
+     * @return formatted date in FORECAST_VIEW_DATE_FORMAT
+     */
+    @Override
+    public String getFormattedDate(String inputDateString) {
+        Resources resources = context.getResources();
+        SimpleDateFormat sdf = new SimpleDateFormat(INPUT_DATE_FORMAT);
+        try {
+            Date date = sdf.parse(inputDateString);
+
+            Calendar inputDate = Calendar.getInstance();
+            inputDate.setTime(date);
+
+            Calendar now = Calendar.getInstance();
+
+            if (now.get(Calendar.DATE) == inputDate.get(Calendar.DATE)) {
+                return resources.getString(R.string.today);
+            } else if (inputDate.get(Calendar.DATE) - now.get(Calendar.DATE) == 1) {
+                return resources.getString(R.string.tomorrow);
+            } else {
+                return DateFormat.format(FORECAST_VIEW_DATE_FORMAT, inputDate).toString();
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return "";
     }
 }

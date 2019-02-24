@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidConfiguredLogFilters">
-    <filters>
-      <filter>
-        <option name="logLevel" value="verbose" />
-        <option name="logMessagePattern" value="" />
-        <option name="logTagPattern" value="" />
-        <option name="name" value="Unnamed-0" />
-        <option name="packageNamePattern" value="com.vishal.weatherapp" />
-        <option name="pid" value="" />
-      </filter>
-    </filters>
-  </component>
   <component name="AndroidLayouts">
     <shared>
       <config />
@@ -21,12 +9,8 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Unnamed-0" />
   </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/res/layout/weather_activity.xml" line="64" mnemonic="3" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="05dea322-0f96-420a-b001-4ef561bea1a8" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="bebe670f-58bd-4cc3-ac71-184ff262ecb4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,127 +35,46 @@
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="2010281331">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="1" />
-          <entry key="gradle" value="7" />
-          <entry key="java" value="95" />
-          <entry key="png" value="5" />
-          <entry key="xml" value="22" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="Groovy" value="7" />
-          <entry key="Image" value="5" />
-          <entry key="JAVA" value="95" />
-          <entry key="XML" value="22" />
-        </counts>
-      </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="7" />
-          <entry key="gradle" value="49" />
-          <entry key="java" value="6503" />
-          <entry key="xml" value="1077" />
+          <entry key="java" value="75" />
+          <entry key="xml" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="49" />
-          <entry key="JAVA" value="6503" />
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="XML" value="1077" />
+          <entry key="JAVA" value="75" />
+          <entry key="XML" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="10" />
+          <entry key="xml" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="10" />
+          <entry key="XML" value="15" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="178" column="29" lean-forward="true" selection-start-line="178" selection-start-column="29" selection-end-line="178" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3172#3360#0" expanded="true" />
-                <element signature="e#3359#3360#0" expanded="true" />
-                <element signature="e#3403#4015#0" expanded="true" />
-                <element signature="e#4014#4015#0" expanded="true" />
-                <element signature="e#6623#6624#0" expanded="true" />
-                <element signature="e#6679#6680#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/utils/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="3" lean-forward="true" selection-start-line="9" selection-end-line="15" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherContract.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="17" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherModelImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="3" lean-forward="true" selection-start-line="13" selection-end-line="21" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherPresenterImpl.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/weather_activity.xml">
+          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-348">
-              <caret line="68" column="47" lean-forward="true" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
+            <state relative-caret-position="401">
+              <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7216#7217#0" expanded="true" />
-                <element signature="e#7261#7262#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/ForecastAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="20" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#708#736#0" expanded="true" />
+                <element signature="e#771#799#0" expanded="true" />
+                <element signature="e#1263#1291#0" expanded="true" />
+                <element signature="e#1371#1399#0" expanded="true" />
+                <element signature="e#1436#1467#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,6 +88,7 @@
         <option value="Class" />
         <option value="layoutResourceFile" />
         <option value="resourceFile" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
@@ -209,46 +113,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/anim/anim.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/anim/rotate.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/CoreAPIRestService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/Utils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/CoreAPIClient.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/Condition.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/TempreatureResponse.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherRestService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherAPIClient.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/erro.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/TemperatureResponse.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/Day.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/ForecastDataModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/PaymentSummaryRecyclerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/forecast_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_up.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/anim/aslide_up_anim.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_up_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/utils/TextWatcherAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/utils/ClearableEditText.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/weather_activity.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/network/WeatherAPIClient.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/network/WeatherRestService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/ForecastAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherContract.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/utils/Utils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherModelImpl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherPresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/forecast_row.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/weather_activity.xml" />
       </list>
     </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -329,7 +201,7 @@
               <item name="WeatherApp" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="mipmap" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="WeatherApp" type="1abcf292:AndroidViewProjectNode" />
@@ -347,7 +219,7 @@
     <property name="DEBUGGABLE_PROCESS" value="com.vishal.weatherapp" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="AMA&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/AndroidManifest.xml&#10;Uti&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/java/com/vishal/weatherapp/utils/Utils.java&#10;bui&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/build.gradle&#10;AMAni&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/AndroidManifest.xml&#10;build&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/build.gradle&#10;WeaA&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/java/com/vishal/weatherapp/WeatherActivity.java&#10;Imp&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/java/com/vishal/weatherapp/WeatherPresenterImpl.java&#10;Mode&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/java/com/vishal/weatherapp/WeatherModelImpl.java&#10;WA&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/java/com/vishal/weatherapp/WeatherActivity.java&#10;AMAn&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/AndroidManifest.xml&#10;bu&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/build.gradle" />
+    <property name="SearchEverywhereHistoryKey" value="COn&#9;PSI&#9;JAVA://com.vishal.weatherapp.WeatherContract&#10;Mo&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/java/com/vishal/weatherapp/WeatherModelImpl.java&#10;AMA&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/AndroidManifest.xml&#10;Uti&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/java/com/vishal/weatherapp/utils/Utils.java&#10;bui&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/build.gradle&#10;AMAni&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/AndroidManifest.xml&#10;build&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/build.gradle&#10;WeaA&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/java/com/vishal/weatherapp/WeatherActivity.java&#10;Imp&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/java/com/vishal/weatherapp/WeatherPresenterImpl.java&#10;Mode&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/java/com/vishal/weatherapp/WeatherModelImpl.java&#10;WA&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/java/com/vishal/weatherapp/WeatherActivity.java&#10;AMAn&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/src/main/AndroidManifest.xml&#10;bu&#9;FILE&#9;file:///Users/viskp/Work/AndroidStudio/WeatherApp/app/build.gradle" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="921eceda" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -448,7 +320,7 @@
     <frame x="0" y="23" width="1440" height="825" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.32689556" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.32689556" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -458,7 +330,7 @@
       <window_info anchor="bottom" id="Run" order="0" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.6466576" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3287858" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3287858" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3287858" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
@@ -469,7 +341,7 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" weight="0.3297568" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.40200287" />
+      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.40200287" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
     <layout-to-restore>
@@ -507,255 +379,23 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
   </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>((HttpException) e).response().errorBody().string()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>body.toString()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>location</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>maxTemp + degreeChar</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>minTemp + degreeChar</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/banner.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/clouds.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="68" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.0/2a12207db845a9f2008c90b6d179ed93b9becfc5/rxjava-2.0.0-sources.jar!/io/reactivex/schedulers/Schedulers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.1.13/f60b1cb54da863cfb2078dd82bd4edb18e024974/rxjava-2.1.13-sources.jar!/io/reactivex/Observable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="12074" column="51" selection-start-line="12074" selection-start-column="51" selection-end-line="12074" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/erro.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/error.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/java/lang/Error.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/Location.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7113" selection-start-line="7113" selection-end-line="7113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/TemperatureResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/Condition_.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/Day.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="162" column="38" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/Condition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/Current.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/Error.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/graphics/drawable/Drawable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="179" selection-start-line="179" selection-end-line="180" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/d80d965a6029d58aa2d7ab8c853f7305/jars/classes.jar!/android/support/v7/widget/RecyclerView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="4279" column="33" selection-start-line="4279" selection-start-column="33" selection-end-line="4279" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/sun.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/clear.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/Forecast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding>
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/pojo/ForecastDataModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/utils/TextWatcherAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#599#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_row.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="41" selection-start-line="5" selection-start-column="3" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/utils/ClearableEditText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1888">
-          <caret line="134" column="42" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#599#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_up_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/aslide_up_anim.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/rotate.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/weather_activity.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/network/WeatherAPIClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        <state relative-caret-position="420">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1524#1918#0" expanded="true" />
-            <element signature="e#1917#1918#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/network/WeatherRestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -767,20 +407,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/network/WeatherRestService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="16" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/utils/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="9" selection-end-line="15" selection-end-column="3" />
+        <state relative-caret-position="360">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -789,8 +419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/ForecastAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="20" selection-end-column="3" />
+        <state relative-caret-position="-112">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -799,24 +429,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="178" column="29" lean-forward="true" selection-start-line="178" selection-start-column="29" selection-end-line="178" selection-end-column="29" />
+        <state relative-caret-position="-1567">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3172#3360#0" expanded="true" />
-            <element signature="e#3359#3360#0" expanded="true" />
-            <element signature="e#3403#4015#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
-            <element signature="e#6623#6624#0" expanded="true" />
-            <element signature="e#6679#6680#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherContract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="17" selection-end-column="3" />
+        <state relative-caret-position="720">
+          <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -825,8 +449,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherModelImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="3" lean-forward="true" selection-start-line="13" selection-end-line="21" selection-end-column="3" />
+        <state relative-caret-position="218">
+          <caret line="97" column="28" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -835,12 +459,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vishal/weatherapp/WeatherPresenterImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-348">
-          <caret line="68" column="47" lean-forward="true" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
+        <state relative-caret-position="2265">
+          <caret line="151" column="46" selection-start-line="151" selection-start-column="46" selection-end-line="151" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7216#7217#0" expanded="true" />
-            <element signature="e#7261#7262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/aslide_up_anim.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/rotate.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_up_item.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_row.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+          <folding>
+            <element signature="e#310#334#0" expanded="true" />
+            <element signature="e#363#390#0" expanded="true" />
+            <element signature="e#689#724#0" expanded="true" />
+            <element signature="e#1056#1071#0" expanded="true" />
+            <element signature="e#1258#1293#0" expanded="true" />
+            <element signature="e#1405#1440#0" expanded="true" />
+            <element signature="e#1479#1514#0" expanded="true" />
+            <element signature="e#1895#1934#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/weather_activity.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+          <folding>
+            <element signature="e#708#736#0" expanded="true" />
+            <element signature="e#771#799#0" expanded="true" />
+            <element signature="e#1263#1291#0" expanded="true" />
+            <element signature="e#1371#1399#0" expanded="true" />
+            <element signature="e#1436#1467#0" expanded="true" />
           </folding>
         </state>
       </provider>

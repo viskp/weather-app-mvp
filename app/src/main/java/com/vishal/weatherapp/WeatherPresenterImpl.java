@@ -149,7 +149,7 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
                         if (null != dayDetails) {
                             Double minTemp = dayDetails.getMintempC();
                             Double maxTemp = dayDetails.getMaxtempC();
-                            day = Utils.getFormattedDate(forecastday.getDate());
+                            day = weatherModel.getFormattedDate(forecastday.getDate());
                             Condition conditions = dayDetails.getCondition();
                             if (null != conditions) {
                                 condition = conditions.getText();

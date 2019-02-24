@@ -6,19 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".WeatherActivity">
 
-
     <RelativeLayout
         android:id="@+id/loader_main_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@mipmap/background"
         android:gravity="center"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <ImageView
             android:id="@+id/loader"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/loader_width_height"
+            android:layout_height="@dimen/loader_width_height"
             android:src="@mipmap/loader" />
     </RelativeLayout>
 
@@ -27,15 +26,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/weather_card_margin"
             android:layout_weight=".08"
-            card_view:cardCornerRadius="5dp"
-            card_view:cardElevation="5dp">
+            card_view:cardCornerRadius="@dimen/weather_card_radius"
+            card_view:cardElevation="@dimen/weather_card_elevation">
 
             <EditText
                 android:id="@+id/search_city"
@@ -45,8 +44,8 @@
                 android:drawableRight="@android:drawable/ic_menu_search"
                 android:inputType="text"
                 android:maxLines="1"
-                android:padding="5dp"
-                android:text="Bengaluru" />
+                android:padding="@dimen/city_padding"
+                android:text="@string/default_city" />
         </android.support.v7.widget.CardView>
 
         <LinearLayout
@@ -62,16 +61,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:textSize="72sp"
-                tools:text="26" />
+                android:textSize="@dimen/temp_text_size" />
 
             <TextView
                 android:id="@+id/city_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:textSize="24sp"
-                tools:text="Bangalore" />
+                android:textSize="@dimen/city_text_size" />
 
         </LinearLayout>
 
@@ -96,8 +93,8 @@
             android:layout_centerVertical="true"
             android:drawableTop="@mipmap/error"
             android:gravity="center"
-            android:text="Retry"
-            android:textColor="#fff"
-            android:textSize="40sp" />
+            android:text="@string/retry"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/retry_text_size" />
     </RelativeLayout>
 </RelativeLayout>

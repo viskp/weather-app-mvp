@@ -45,5 +45,7 @@ public interface WeatherContract {
         Observable<TemperatureResponse> initiateWeatherInfoCall(String cityName);
 
         Drawable getConditionIcon(int code);
+
+        String getFormattedDate(String inputDateString);
     }
 }

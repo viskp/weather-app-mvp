@@ -22,39 +22,8 @@ public class Utils {
     public static final String API_KEY = "key=727b31d5c027441f8e4102934192202";
     public static final String FORECAST_DAYS = "7";
     private static final char DEGREE_CHAR = (char) 0x00B0;
-    private static final String INPUT_DATE_FORMAT = "yyyy-MM-dd";
-    private static final String FORECAST_VIEW_DATE_FORMAT = "dd MMM yyyy";
-
-    /**
-     * Calculates the display date from a give date inputDateString, uses the
-     * FORECAST_VIEW_DATE_FORMAT for dates other that today and tomorrow.
-     *
-     * @param inputDateString date to be formatted
-     * @return formatted date in FORECAST_VIEW_DATE_FORMAT
-     */
-    public static String getFormattedDate(String inputDateString) {
-        SimpleDateFormat sdf = new SimpleDateFormat(INPUT_DATE_FORMAT);
-        try {
-            Date date = sdf.parse(inputDateString);
-
-            Calendar inputDate = Calendar.getInstance();
-            inputDate.setTime(date);
-
-            Calendar now = Calendar.getInstance();
-
-            if (now.get(Calendar.DATE) == inputDate.get(Calendar.DATE)) {
-                return "Today";
-            } else if (inputDate.get(Calendar.DATE) - now.get(Calendar.DATE) == 1) {
-                return "Tomorrow";
-            } else {
-                return DateFormat.format(FORECAST_VIEW_DATE_FORMAT, inputDate).toString();
-            }
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        return "";
-    }
+    public static final String INPUT_DATE_FORMAT = "yyyy-MM-dd";
+    public static final String FORECAST_VIEW_DATE_FORMAT = "dd MMM yyyy";
 
     /**
      * Appends a degree symbol to give double value.
