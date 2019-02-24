@@ -2,6 +2,7 @@ package com.vishal.weatherapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.animation.Animation;
@@ -11,6 +12,10 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.vishal.weatherapp.pojo.ForecastDataModel;
+
+import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -89,6 +94,12 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
     @Override
     public void showErrorMessage(String message) {
         Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showForeCastData(List<ForecastDataModel> forecastData) {
+        forecastRV.setLayoutManager(new LinearLayoutManager(this));
+        forecastRV.setAdapter(new ForecastAdapter(activity, forecastData));
     }
 
     @Override

@@ -32,10 +32,13 @@ public class WeatherModelImpl implements WeatherContract.Model {
         switch (code) {
             case 1000:
                 icon = R.mipmap.sun;
+                break;
             case 1003:
                 icon = R.mipmap.clear;
+                break;
             case 1006:
                 icon = R.mipmap.clouds;
+                break;
             case 1180:
             case 1183:
             case 1186:
@@ -45,8 +48,10 @@ public class WeatherModelImpl implements WeatherContract.Model {
             case 1198:
             case 1201:
                 icon = R.mipmap.rain;
+                break;
             case 1117:
                 icon = R.mipmap.storm;
+                break;
         }
         return ContextCompat.getDrawable(context, icon);
     }

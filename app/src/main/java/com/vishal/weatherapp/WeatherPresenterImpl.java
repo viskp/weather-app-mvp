@@ -27,7 +27,6 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
     private Scheduler processThread;
     private Scheduler mainThread;
     private CompositeDisposable compositeDisposable;
-    private char degreeChar = (char) 0x00B0;
 
     public WeatherPresenterImpl(WeatherContract.View weatherView, WeatherContract.Model weatherModel
             , Scheduler processThread, Scheduler mainThread) {
@@ -89,7 +88,8 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
                         weatherView.handleLoaderView(false);
                         weatherView.handleErrorView(false);
                         weatherView.handleWeatherView(true);
-                        weatherView.setCityCurrentTemperature(cityName, String.valueOf(temperature));
+                        weatherView.setCityCurrentTemperature(cityName, Utils.addDegreeSymbol
+                                (temperature));
                     } else {
                         showErrorView();
                     }
@@ -116,11 +116,15 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
                                 conditionIcon = weatherModel.getConditionIcon(conditions.getCode());
                             }
                             if (null != minTemp && null != maxTemp) {
-                                minMaxTemp = minTemp + degreeChar + "/" + maxTemp + degreeChar;
+                                minMaxTemp = Utils.addDegreeSymbol(minTemp) + "/" +
+                                        Utils.addDegreeSymbol(maxTemp);
                             }
                             forecastData.add(new ForecastDataModel(day, condition, conditionIcon,
                                     minMaxTemp));
                         }
+                    }
+                    if (forecastData.size() > 0) {
+                        weatherView.showForeCastData(forecastData);
                     }
                 }
             }
