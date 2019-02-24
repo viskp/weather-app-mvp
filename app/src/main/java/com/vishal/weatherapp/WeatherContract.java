@@ -29,7 +29,7 @@ public interface WeatherContract {
     interface Presenter {
         void initView();
 
-        void getWeatherData();
+        void getWeatherData(String cityName);
 
         void destroyView();
     }

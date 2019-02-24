@@ -1,8 +1,11 @@
 package com.vishal.weatherapp;
 
 import android.graphics.drawable.Drawable;
+import android.text.Annotation;
 import android.text.TextUtils;
+import android.util.Log;
 
+import com.google.gson.Gson;
 import com.vishal.weatherapp.pojo.Condition;
 import com.vishal.weatherapp.pojo.Current;
 import com.vishal.weatherapp.pojo.Day;
@@ -14,12 +17,16 @@ import com.vishal.weatherapp.pojo.Location;
 import com.vishal.weatherapp.pojo.TemperatureResponse;
 import com.vishal.weatherapp.utils.Utils;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import io.reactivex.Scheduler;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.observers.DisposableObserver;
+import okhttp3.ResponseBody;
+import retrofit2.Converter;
+import retrofit2.HttpException;
 
 public class WeatherPresenterImpl implements WeatherContract.Presenter {
     private WeatherContract.View weatherView;
@@ -46,30 +53,45 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
 
 
     @Override
-    public void getWeatherData() {
-        weatherView.handleLoaderView(true);
-        weatherView.handleWeatherView(false);
-        weatherView.handleErrorView(false);
-        compositeDisposable.add(weatherModel.
-                initiateWeatherInfoCall("Bengaluru")
-                .subscribeOn(processThread)
-                .observeOn(mainThread)
-                .subscribeWith(new DisposableObserver<TemperatureResponse>() {
-                    @Override
-                    public void onNext(TemperatureResponse temperatureResponse) {
-                        handleTemperatureResponse(temperatureResponse);
-                    }
+    public void getWeatherData(String cityName) {
+        if (!TextUtils.isEmpty(cityName)) {
+            weatherView.handleLoaderView(true);
+            weatherView.handleWeatherView(false);
+            weatherView.handleErrorView(false);
+            compositeDisposable.add(weatherModel.
+                    initiateWeatherInfoCall(cityName)
+                    .subscribeOn(processThread)
+                    .observeOn(mainThread)
+                    .subscribeWith(new DisposableObserver<TemperatureResponse>() {
+                        @Override
+                        public void onNext(TemperatureResponse temperatureResponse) {
+                            handleTemperatureResponse(temperatureResponse);
+                        }
 
-                    @Override
-                    public void onError(Throwable e) {
-                        weatherView.handleErrorView(true);
-                    }
+                        @Override
+                        public void onError(Throwable e) {
+                            if (e instanceof HttpException) {
+                                try {
+                                    String body = ((HttpException) e).response().errorBody().string();
+                                    Gson gson = new Gson();
+                                    handleTemperatureResponse(gson.fromJson(body,
+                                            TemperatureResponse.class));
+                                } catch (IOException e1) {
+                                    e1.printStackTrace();
+                                }
+                            } else {
+                                weatherView.handleErrorView(true);
+                            }
+                        }
 
-                    @Override
-                    public void onComplete() {
+                        @Override
+                        public void onComplete() {
 
-                    }
-                }));
+                        }
+                    }));
+        } else {
+            weatherView.showErrorMessage("Invalid City");
+        }
     }
 
     public void handleTemperatureResponse(TemperatureResponse temperatureResponse) {
@@ -77,7 +99,8 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
             Error error = temperatureResponse.getError();
             if (null != error) {
                 weatherView.showErrorMessage(error.getMessage());
-                showErrorView();
+                weatherView.handleLoaderView(false);
+                weatherView.handleWeatherView(true);
             } else {
                 Location location = temperatureResponse.getLocation();
                 Current current = temperatureResponse.getCurrent();

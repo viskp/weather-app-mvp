@@ -4,9 +4,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -31,6 +34,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
     private RecyclerView forecastRV;
     private RelativeLayout errorViewRL;
     private WeatherActivity activity;
+    private EditText searchCityET;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +46,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
         weatherPresenter = new WeatherPresenterImpl(activity, weatherModel, Schedulers.io()
                 , AndroidSchedulers.mainThread());
         weatherPresenter.initView();
-        weatherPresenter.getWeatherData();
+        weatherPresenter.getWeatherData(getTextToBeSearched());
     }
 
     @Override
@@ -54,10 +58,25 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
         cityNameTV = findViewById(R.id.city_name);
         forecastRV = findViewById(R.id.forecast);
         errorViewRL = findViewById(R.id.retry_main_view);
+        searchCityET = findViewById(R.id.search_city);
         errorViewRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                weatherPresenter.getWeatherData();
+                weatherPresenter.getWeatherData(getTextToBeSearched());
+            }
+        });
+        searchCityET.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                final int DRAWABLE_RIGHT = 2;
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (event.getRawX() >= (searchCityET.getRight() - searchCityET.
+                            getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                        weatherPresenter.getWeatherData(getTextToBeSearched());
+                        return true;
+                    }
+                }
+                return false;
             }
         });
     }
@@ -100,11 +119,20 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
     public void showForeCastData(List<ForecastDataModel> forecastData) {
         forecastRV.setLayoutManager(new LinearLayoutManager(this));
         forecastRV.setAdapter(new ForecastAdapter(activity, forecastData));
+        final LayoutAnimationController controller =
+                AnimationUtils.loadLayoutAnimation(activity, R.anim.aslide_up_anim);
+        forecastRV.setLayoutAnimation(controller);
+        forecastRV.getAdapter().notifyDataSetChanged();
+        forecastRV.scheduleLayoutAnimation();
     }
 
     @Override
     public void finish() {
         super.finish();
         weatherPresenter.destroyView();
+    }
+
+    private String getTextToBeSearched() {
+        return searchCityET.getText().toString();
     }
 }
