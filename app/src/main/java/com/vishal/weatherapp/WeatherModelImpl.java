@@ -24,7 +24,7 @@ import static com.vishal.weatherapp.utils.Utils.INPUT_DATE_FORMAT;
 /**
  * Model implementation for {@link WeatherActivity} that holds the data required by the
  * {@link WeatherPresenterImpl}.
- * Here we can define get the datas from different sources like, SharedPref, LocalDB, Network call
+ * Here we can define get the data from different sources like, SharedPref, LocalDB, Network call
  * and so on.
  *
  * @author Vishal - 24th Feb 2019
@@ -116,7 +116,11 @@ public class WeatherModelImpl implements WeatherContract.Model {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
         return "";
+    }
+
+    @Override
+    public String getInvalidCityMessage() {
+        return context.getString(R.string.invalid_city);
     }
 }

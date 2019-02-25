@@ -1,7 +1,6 @@
 package com.vishal.weatherapp;
 
 import android.graphics.drawable.Drawable;
-import android.text.TextUtils;
 
 import com.google.gson.Gson;
 import com.vishal.weatherapp.pojo.Condition;
@@ -14,6 +13,8 @@ import com.vishal.weatherapp.pojo.Forecastday;
 import com.vishal.weatherapp.pojo.Location;
 import com.vishal.weatherapp.pojo.TemperatureResponse;
 import com.vishal.weatherapp.utils.Utils;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -65,7 +66,7 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
      */
     @Override
     public void getWeatherData(String cityName) {
-        if (!TextUtils.isEmpty(cityName)) {
+        if (!StringUtils.isEmpty(cityName)) {
             weatherView.handleLoaderView(true);
             weatherView.handleWeatherView(false);
             weatherView.handleErrorView(false);
@@ -101,7 +102,7 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
                         }
                     }));
         } else {
-            weatherView.showErrorMessage("Invalid City");
+            weatherView.showErrorMessage(weatherModel.getInvalidCityMessage());
         }
     }
 
@@ -111,6 +112,7 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
      *
      * @param temperatureResponse
      */
+    @Override
     public void handleTemperatureResponse(TemperatureResponse temperatureResponse) {
         if (null != temperatureResponse) {
             Error error = temperatureResponse.getError();
@@ -124,7 +126,7 @@ public class WeatherPresenterImpl implements WeatherContract.Presenter {
                 if (null != location && null != current) {
                     String cityName = location.getName();
                     Double temperature = current.getTempC();
-                    if (!TextUtils.isEmpty(cityName) && null != temperature) {
+                    if (!StringUtils.isEmpty(cityName) && null != temperature) {
                         weatherView.handleLoaderView(false);
                         weatherView.handleErrorView(false);
                         weatherView.handleWeatherView(true);

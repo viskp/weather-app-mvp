@@ -39,6 +39,8 @@ public interface WeatherContract {
         void getWeatherData(String cityName);
 
         void destroyView();
+
+        void handleTemperatureResponse(TemperatureResponse temperatureResponse);
     }
 
     interface Model {
@@ -47,5 +49,7 @@ public interface WeatherContract {
         Drawable getConditionIcon(int code);
 
         String getFormattedDate(String inputDateString);
+
+        String getInvalidCityMessage();
     }
 }

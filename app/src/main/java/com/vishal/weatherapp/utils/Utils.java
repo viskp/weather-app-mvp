@@ -1,12 +1,5 @@
 package com.vishal.weatherapp.utils;
 
-import android.text.format.DateFormat;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
 /**
  * This is a utility class that can be access from anywhere in the application.It contains the
  * commonly used utility methods.
@@ -32,6 +25,9 @@ public class Utils {
      * @return formatted text with degree
      */
     public static String addDegreeSymbol(Double temp) {
+        if (null == temp) {
+            return "-" + DEGREE_CHAR;
+        }
         return String.valueOf(Math.round(temp)) + DEGREE_CHAR;
     }
 }
