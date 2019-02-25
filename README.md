@@ -23,6 +23,4 @@ Tools/Libraries/Patterns Used
 
 Sample Screenshots
 ------------------
-![Loader Screen](https://user-images.githubusercontent.com/7289032/53354994-125fa080-394e-11e9-8c0c-da9806c19712.jpg)
-![Error Screen](https://user-images.githubusercontent.com/7289032/53354996-12f83700-394e-11e9-8667-2fd62b6a4f08.jpg)
-![Weather and Forecast Screen](https://user-images.githubusercontent.com/7289032/53354995-12f83700-394e-11e9-9609-b045ef0d09b8.jpg)
+![Loader Screen](https://user-images.githubusercontent.com/7289032/53355510-26f06880-394f-11e9-841d-26c4e5695c68.png)
