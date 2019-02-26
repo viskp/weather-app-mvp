@@ -6,7 +6,7 @@ Architecture overview
 ---------------------
 
 Weather App follows the [MVP](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter),
-and [JUnit](https://junit.org/junit5/) is used for unit test case and [Espresso](https://developer.android.com/training/testing/espresso)
+and [JUnit](https://junit.org/junit5/) is used for unit test case and [Espresso](https://developer.android.com/training/testing/espresso) for instrumentation testing.
 
 Tools/Libraries/Patterns Used
 -----------------------------
